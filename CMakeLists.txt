@@ -52,8 +52,10 @@ target_include_directories(
 
 add_subdirectory (third_party EXCLUDE_FROM_ALL)
 include_directories (${THIRD_PARTY_INCLUDE_PATH})
+message(STATUS "THIRD_PARTY_INCLUDE_PATH: " ${THIRD_PARTY_INCLUDE_PATH})
 
 set(HEADER_BASE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+message(STATUS "HEADER_BASE: " ${HEADER_BASE})
 
 if(HOL_BUILD_EXAMPLES)
     add_subdirectory(examples)
@@ -150,5 +152,6 @@ if(HOL_INSTALL)
 endif()
 
 file(GLOB_RECURSE header_only_lib_include_SRCS "${HEADER_BASE}/*.h")
-add_custom_target(header_only_lib_headers_for_ide SOURCES ${header_only_lib_include_SRCS})
+file(GLOB_RECURSE third_party_include_SRCS "${THIRD_PARTY_INCLUDE_PATH}/*.h")
+add_custom_target(header_only_lib_headers_for_ide SOURCES ${header_only_lib_include_SRCS} ${third_party_include_SRCS})
 
