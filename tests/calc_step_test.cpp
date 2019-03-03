@@ -2,9 +2,9 @@
  *  Distributed under the MIT License (See accompanying file /LICENSE )
  */
 #include <catch.hpp>
-#include "calc.h"
+#include "header_only_lib/calc.h"
 
-namespace ModernCppCI {
+namespace header_only_lib {
 
 namespace Test {
 
@@ -30,4 +30,4 @@ TEST_CASE("creating CalcStep with an operation shouldn't have a value",
 
 }  // namespace Test
 
-}  // namespace ModernCppCI
+}  // namespace header_only_lib

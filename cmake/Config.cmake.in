@@ -1,0 +1,8 @@
+set(HOL_FMT_EXTERNAL @HOL_FMT_EXTERNAL@)
+
+include("${CMAKE_CURRENT_LIST_DIR}/@targets_export_name@.cmake")
+
+if(HOL_FMT_EXTERNAL)
+    include(CMakeFindDependencyMacro)
+    find_dependency(fmt CONFIG)
+endif()

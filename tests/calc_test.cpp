@@ -1,12 +1,12 @@
 /*
  *  Distributed under the MIT License (See accompanying file /LICENSE )
  */
-#include "calc.h"
+#include "header_only_lib/calc.h"
 #include <catch.hpp>
 #include <sstream>
 #include <memory>
 
-namespace ModernCppCI {
+namespace header_only_lib {
 
 namespace Test {
 
@@ -105,4 +105,4 @@ TEST_CASE("adding steps will work", "[calc]") {
 
 }  // namespace Test
 
-}  // namespace ModernCppCI
+}  // namespace header_only_lib

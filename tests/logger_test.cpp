@@ -1,10 +1,10 @@
 /*
  *  Distributed under the MIT License (See accompanying file /LICENSE )
  */
-#include "logger.h"
+#include "header_only_lib/logger.h"
 #include <catch.hpp>
 
-namespace ModernCppCI {
+namespace header_only_lib {
 
 namespace Test {
 
@@ -102,4 +102,4 @@ TEST_CASE("logger work as expected", "[logger]") {
 
 }  // namespace Test
 
-}  // namespace ModernCppCI
+}  // namespace header_only_lib
