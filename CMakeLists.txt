@@ -152,6 +152,5 @@ if(HOL_INSTALL)
 endif()
 
 file(GLOB_RECURSE header_only_lib_include_SRCS "${HEADER_BASE}/*.h")
-file(GLOB_RECURSE third_party_include_SRCS "${THIRD_PARTY_INCLUDE_PATH}/*.h")
-add_custom_target(header_only_lib_headers_for_ide SOURCES ${header_only_lib_include_SRCS} ${third_party_include_SRCS})
+add_custom_target(header_only_lib_headers_for_ide SOURCES ${header_only_lib_include_SRCS})
 
